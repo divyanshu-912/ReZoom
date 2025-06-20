@@ -24,7 +24,16 @@
   </header>
 
   <main class="container">
-   
+    <h1>Try our Templates</h1>
+    <div class="themes">
+      <% themes.forEach(theme => { %>
+        <div class="theme-card">
+          <img src="<%= theme.image %>" alt="<%= theme.name %> preview">
+          <h3 class="theme-name"><%= theme.name %></h3>
+          <a class="select-btn" href="/resume/form?theme=<%= theme.id %>">Use this Template</a>
+        </div>
+      <% }) %>
+    </div>
   </main>
 
   <footer>

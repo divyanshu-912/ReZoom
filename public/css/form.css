@@ -1,0 +1,67 @@
+
+
+body{
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom right, #e6f5f5, #f6f9fb);
+  min-height: 100vh;
+  color: #1f2937;
+}
+
+.form-container{
+align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+#resumeForm{
+    width: 100vh;
+    margin: 3px;
+    
+    padding: 20px;
+    background-color: #198754;
+    border-radius: 5px;
+}
+form input{
+    height: 30px;
+    width: 49vh;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    border: none;
+}
+
+textarea{
+    height: 40px;
+    width: 99vh;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    border: none;
+}
+.btn {
+  background: #F1FFF8;
+  color: #198754;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 0.7em 1.5em;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+}
+#theme-list{
+    height: 35px;
+    width: 30vh;
+    margin-bottom: 10px;
+}
+
+.add-btn{
+  background: #F1FFF8;
+  color: #198754;
+  border-radius: 2px;
+  text-decoration: none;
+  padding: 0.4em 1.0em;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  font-size: .7em;
+}

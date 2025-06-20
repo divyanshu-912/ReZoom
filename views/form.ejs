@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resume Generator</title>
+  
+  <link rel="stylesheet" href="/css/form.css">
+  
+</head>
+<body>
+
+
+
+<div class="form-container">
+  <h1>Resume Generator</h1>
+  <form action="/resume/generate" method="POST" id="resumeForm">
+    <label><input name="name" placeholder="Full Name" required></label>
+    
+
+    <label><input type="text" name="app_post" placeholder="Post of Application"></label>
+    <div class="contact-details">
+      <span>Contact Details:</span><br>
+      <label><input name="email" placeholder="Email Address" required></label>
+      <label><input name="phone" placeholder="Phone Number"></label>
+      <label><input name="linkedin"  placeholder="LinkedIN"></label>
+      <label><input name="github" placeholder="Github"></label>
+    </div>
+   
+
+   
+<div class="workExperience" id="work-section">
+  <span>Work Experience</span><br>
+  <label><input type="text" name="job[]" placeholder="Position"></label>
+  <label><input type="text" name="company[]" placeholder="Company Name"></label>
+  <label><input type="text" name="location[]" placeholder="Location"></label>
+  <label><input type="text" name="period[]" placeholder="Duration of Work"></label>
+  <label><input type="text" name="details[]" placeholder="Detail"></label><br>
+</div>
+<button type="button" onclick="addWork()" class="add-btn">Add Work Experience</button>
+
+   
+    
+
+<div class="education" id="education-section">
+  <span>Education:</span><br>
+  <label><input name="degree[]" placeholder="Degree"></label>
+  <label><input name="education[]" placeholder="Institute Name"></label>
+  <label><input type="text" name="duration[]" placeholder="Duration"></label>
+  <label><input type="text" name="cgpa[]" placeholder="CGPA"></label>
+</div>
+<button type="button" onclick="addEducation()" class="add-btn">Add Education</button>
+
+
+
+    <div class="projects-section" id="projects-section">
+    <span>Projects:</span><br>
+      <label><input type="text" class="project_heading" name="projects[]" placeholder="Project 1"></label>
+      <label><input type="text" name="desc[]" placeholder="Desc[]"></label>
+      <label><input type="text" name="tech[]" placeholder="Tech Stack use"></label>
+    </div>
+    <button type="button" onclick="addProject()" class="add-btn">Add Project</button>
+
+
+
+<div class="achievement-section" id="achievement-section">
+  <span>Achievements:</span><br>
+  <label><input type="text" name="achievement[]" placeholder="Achievement 1"></label>
+  
+  <label><input type="text" name="area[]" placeholder="Area of Achievement"></label><br>
+  <label><input type="text" name="descA[]" placeholder="Description"></label><br>
+</div>
+<button type="button" onclick="addAchievement()" class="add-btn">Add Achievement</button>
+
+
+    
+    <label><br><input name="skills" placeholder="Skills (comma separated)"></label><br>
+    <label>Theme:
+      <select name="theme" id="theme-list">
+        <option value="classic" <%= theme === 'classic' ? "selected" : "" %>>Classic</option>
+        <option value="modern" <%= theme === 'modern' ? "selected" : "" %>>Modern</option>
+        <option value="elegant" <%= theme === 'elegant' ? "selected" : "" %>>Elegant</option>
+        <option value="professional" <%= theme === 'professional' ? "selected" : "" %>>Professional</option>
+        <option value="modern2" <%= theme === 'modern2' ? "selected" : "" %>>New Modern</option>
+      </select>
+    </label><br>
+    <button type="submit" class="btn">Generate Resume</button>
+  </form>
+
+</div>
+
+<script src="/js/form.js"></script>
+
+
+
+   
+</body>
+</html>

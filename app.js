@@ -13,7 +13,24 @@ app.set('views', path.join(__dirname, 'views'));
 
 
 
+const themes = [
+  { id: "classic", name: "Classic", image: "/images/image.png" },
+  { id: "modern", name: "Modern", image: "/images/image2.png" },
+  { id: "elegant", name: "Elegant", image: "/images/image2.png" },
+  { id: "professional", name: "Professional", image: "/images/image.png" },
+ 
 
-app.get('/', (req, res) => res.render('home'));
+
+  
+ 
+];
+
+app.get('/', (req, res) => res.render('home', { themes }));
+
+app.get('/resume/form', (req, res) => {
+  const selectedTheme = req.query.theme || 'classic';
+  res.render('form', { theme: selectedTheme, themes });
+});
+
 
 app.listen(3000, () => console.log('Server running at http://localhost:3000'));

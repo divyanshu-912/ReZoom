@@ -72,6 +72,58 @@ nav ul li a:hover {
 }
 
 
+.themes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.theme-card {
+  background-color: #f8f8f8; 
+  border: 1px solid #CBD5E1;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s;
+}
+
+.theme-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
+}
+
+.theme-card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}
+
+.theme-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1F2937;
+  margin-bottom: 15px;
+}
+
+.select-btn {
+  display: inline-block;
+  background-color: #198754;
+  color: #ffffff;
+  padding: 10px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.select-btn:hover {
+  background-color: #157347;
+  transform: scale(1.05);
+}
 
 footer {
   background-color: #0c2f2f;
