@@ -18,7 +18,10 @@ const themes = [
   { id: "modern", name: "Modern", image: "/images/image2.png" },
   { id: "elegant", name: "Elegant", image: "/images/image2.png" },
   { id: "professional", name: "Professional", image: "/images/image.png" },
- 
+  { id: "professional", name: "Professional", image: "/images/image2.png" },
+  { id: "modern2", name: "Modern2", image: "/images/image2.png" },
+
+
 
 
   

@@ -1,0 +1,113 @@
+    body { 
+        font-family: 'Segoe UI', sans-serif;
+        background: #f4f6fa;
+        color: #232323; 
+        margin:0; 
+    }
+    .container {
+        max-width: 850px;
+        margin: 40px auto;
+        background: #fff;
+        border-radius: 12px; 
+        box-shadow: 0 4px 36px #c8d0e7; 
+        padding: 40px 56px;
+     }
+    
+    .name { 
+        text-align: center; 
+        font-size: 2.3em; 
+        font-weight: 600; 
+        color: #232323 ; 
+        margin-bottom: 2px; 
+        margin-left: -2px;
+    }
+.app_post {
+        font-size: 1.2em; 
+        font-weight: 600; 
+        color: #df2544; 
+         text-align: center;  
+    }
+
+    .links { 
+        text-align: center; 
+        margin-bottom: 24px; 
+    }
+    .links a { 
+        color: #232323   ; 
+       margin-left: 10px;
+       margin-right: 10px;
+        text-decoration: none; 
+        font-weight: 400;
+        font-size: .8em; 
+    }
+    h2 { 
+        color: #232323; 
+        border-bottom: 2px solid #232323; 
+        padding-left: 2px; 
+        margin-top: 20px; 
+        font-size: .9em; 
+        letter-spacing: 1px;
+     }
+    .section { 
+        margin-bottom: 20px; 
+    }
+    .skills-list { 
+        columns: 2; 
+    }
+    .bold {
+        font-weight: 700; 
+    }
+    
+     .title { font-weight: 600; color: #000000; font-size: .9em; }
+    
+    .company,.title2 { font-weight: 600; color: #df2544; }
+   
+    .period,.cgpa {
+        position: absolute;
+        right: 340px;
+        font-style: italic; color: #666; font-size: .7em; }
+    .details{
+      font-size: 0.8em;
+      font-weight: 500;
+    }
+
+
+   li{
+    list-style: none;
+   }
+  .section2 li,.section4 li{
+      margin-bottom: 20px;
+
+  }
+.section3 ul{
+    display: grid;
+  grid-template-columns:  repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px; /* space between grid items */
+ 
+  max-width: 900px; /* ya jitni chahiye */
+  margin: 0 auto;
+
+   }
+.section3 ul li {
+  width: 100%;
+  
+  padding: 1px;
+  box-sizing: border-box;
+}
+
+
+#downloadPDF{
+  position: relative;
+  top: 20px;
+  left: 30px;
+   background: #0d602c;
+  color: #fff;
+  border-radius: 2px;
+  text-decoration: none;
+  padding: 0.4em 1.0em;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  font-size: .7em;
+}
+  

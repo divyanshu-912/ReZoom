@@ -2,15 +2,9 @@
 <html>
 <head>
   <title>Resume Generator</title>
-  
   <link rel="stylesheet" href="/css/form.css">
-  
 </head>
 <body>
-
-
-
-<div class="form-container">
   <h1>Resume Generator</h1>
   <form action="/resume/generate" method="POST" id="resumeForm">
     <label><input name="name" placeholder="Full Name" required></label>
@@ -33,7 +27,7 @@
   <label><input type="text" name="company[]" placeholder="Company Name"></label>
   <label><input type="text" name="location[]" placeholder="Location"></label>
   <label><input type="text" name="period[]" placeholder="Duration of Work"></label>
-  <label><input type="text" name="details[]" placeholder="Detail"></label><br>
+  <label><input type="text" name="details[]" placeholder="Detail"></label>
 </div>
 <button type="button" onclick="addWork()" class="add-btn">Add Work Experience</button>
 
@@ -55,7 +49,7 @@
     <span>Projects:</span><br>
       <label><input type="text" class="project_heading" name="projects[]" placeholder="Project 1"></label>
       <label><input type="text" name="desc[]" placeholder="Desc[]"></label>
-      <label><input type="text" name="tech[]" placeholder="Tech Stack use"></label>
+      <label><input type="text" name="tech[]" placeholder="Tech Stack use"></label><br>
     </div>
     <button type="button" onclick="addProject()" class="add-btn">Add Project</button>
 
@@ -64,9 +58,8 @@
 <div class="achievement-section" id="achievement-section">
   <span>Achievements:</span><br>
   <label><input type="text" name="achievement[]" placeholder="Achievement 1"></label>
-  
   <label><input type="text" name="area[]" placeholder="Area of Achievement"></label><br>
-  <label><input type="text" name="descA[]" placeholder="Description"></label><br>
+  <label><input type="text" name="descA[]" placeholder="Description"></label>
 </div>
 <button type="button" onclick="addAchievement()" class="add-btn">Add Achievement</button>
 
@@ -85,7 +78,7 @@
     <button type="submit" class="btn">Generate Resume</button>
   </form>
 
-</div>
+
 
 <script src="/js/form.js"></script>
 
