@@ -10,18 +10,24 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
+app.use(session({
+  secret: 'resumeSecret',
+  resave: false,
+  saveUninitialized: true,
+}));
 
 
-
+const logo=[{id:"logo",name:"Logo",image:"/images/rezoomlogo.png"}]
 const themes = [
   { id: "classic", name: "Classic", image: "/images/image.png" },
   { id: "modern", name: "Modern", image: "/images/image2.png" },
   { id: "elegant", name: "Elegant", image: "/images/image2.png" },
   { id: "professional", name: "Professional", image: "/images/image.png" },
+ 
+  { id: "classic", name: "Classic", image: "/images/image2.png" },
+  { id: "elegant", name: "Elegant", image: "/images/image.png" },
   { id: "professional", name: "Professional", image: "/images/image2.png" },
   { id: "modern2", name: "Modern2", image: "/images/image2.png" },
-
-
 
 
   
@@ -31,7 +37,7 @@ const themes = [
 app.get('/', (req, res) => res.render('home', { themes }));
 
 app.get('/resume/form', (req, res) => {
-  const selectedTheme = req.query.theme || 'classic';
+  const selectedTheme = req.query.theme || 'modern';
   res.render('form', { theme: selectedTheme, themes });
 });
 
