@@ -10,24 +10,20 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-app.use(session({
-  secret: 'resumeSecret',
-  resave: false,
-  saveUninitialized: true,
-}));
+
 
 
 const logo=[{id:"logo",name:"Logo",image:"/images/rezoomlogo.png"}]
 const themes = [
-  { id: "classic", name: "Classic", image: "/images/image.png" },
-  { id: "modern", name: "Modern", image: "/images/image2.png" },
-  { id: "elegant", name: "Elegant", image: "/images/image2.png" },
-  { id: "professional", name: "Professional", image: "/images/image.png" },
- 
-  { id: "classic", name: "Classic", image: "/images/image2.png" },
-  { id: "elegant", name: "Elegant", image: "/images/image.png" },
-  { id: "professional", name: "Professional", image: "/images/image2.png" },
-  { id: "modern2", name: "Modern2", image: "/images/image2.png" },
+  { id: "classic", name: "Classic", image: "/images/denverRed.png" },
+  { id: "modern", name: "Modern", image: "/images/denverBlue.png" },
+  { id: "classic", name: "Classic", image: "/images/denverRed.png" },
+  { id: "modern", name: "Modern", image: "/images/denverBlue.png" },
+  { id: "classic", name: "Classic", image: "/images/denverRed.png" },
+  { id: "modern", name: "Modern", image: "/images/denverBlue.png" },
+  { id: "classic", name: "Classic", image: "/images/denverRed.png" },
+  { id: "modern", name: "Modern", image: "/images/denverBlue.png" },
+  
 
 
   
@@ -41,5 +37,8 @@ app.get('/resume/form', (req, res) => {
   res.render('form', { theme: selectedTheme, themes });
 });
 
+
+const resumeRouter = require('./routes/resume');
+app.use('/resume', resumeRouter);
 
 app.listen(3000, () => console.log('Server running at http://localhost:3000'));
