@@ -1,4 +1,9 @@
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body{
      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -7,37 +12,80 @@ body{
   color: #1f2937;
 }
 
+
+header {
+  background-color: #F1FFF8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 40px;
+  border-bottom: 1px solid #ccc;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #0f2b3f;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.logo img {
+  height: 65px;
+}
+
+nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #0a0a0a;
+  font-weight: 600;
+  font-size: 17px;
+  transition: 0.2s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: #198754;
+  border-bottom: 2px solid #198754;
+}
+
 .form-container{
 align-items: center;
     justify-content: center;
     justify-items: center;
 }
 
+
+.form-container h1{
+margin: 25px;
+}
 #resumeForm{
-    width: 100vh;
-    margin: 3px;
+    width: 155vh;
+    margin: 15px;
     
-    padding: 20px;
+    padding: 15px;
     background-color: #198754;
     border-radius: 5px;
 }
 form input{
-    height: 30px;
+    height: 40px;
     width: 49vh;
-    margin-top: 5px;
+    padding: 10px;
+    margin: 4px;
     margin-bottom: 5px;
     border-radius: 3px;
     border: none;
 }
 
-textarea{
-    height: 40px;
-    width: 99vh;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    border-radius: 3px;
-    border: none;
-}
+
 .btn {
   background: #F1FFF8;
   color: #198754;
