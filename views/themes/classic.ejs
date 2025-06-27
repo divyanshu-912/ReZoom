@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resume - <%= name %></title>
+  <link rel="stylesheet" href="/css/themes/classic.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+  <button id="downloadPDF">Download PDF</button>
+  <div class="container">
+   <div class="name"><%= name %></div>
+    <div class="app_post"><%= app_post %></div>
+    <div class="links">
+      <% if (contact.email) { %><a href="<%= contact.email %>"><%= contact.email %></a><% } %>
+      <% if (contact.linkedin) { %><a href="<%= contact.linkedin %>">LinkedIn</a><% } %>
+      <% if (contact.github) { %><a href="<%= contact.github %>">Github</a><% } %>
+      <% if (contact.phone) { %><a href="<%= contact.phone %>"><%= contact.phone %></a><% } %>
+      
+    </div>
+    
+
+    <h2>Experience</h2>
+<div class="section section4">
+  <ul>
+    <% if (workExperience && workExperience.length > 0) { %>
+      <% workExperience.forEach(function(exp) { %>
+        <li><span class="company"><%= exp.company %></span><br>
+          <span class="title"><%= exp.job %></span>
+          
+          <span class="period"><%= exp.location %> | <%= exp.period %> </span>
+          <% if (exp.details) { %>
+            <div class="details"><%= exp.details %></div>
+          <% } %>
+        </li>
+      <% }) %>
+    <% } else { %>
+      <p>No work experience listed.</p>
+    <% } %>
+  </ul>
+</div>
+
+<h2>Education</h2>
+<div class="section section2">
+  <ul>
+    <% if (education && education.length > 0) { %>
+      <% education.forEach(function(edu) { %>
+        <li>
+          <span class="title" ><%= edu.degree %></span>
+          <% if (edu.cgpa) { %>
+            <span class="cgpa"><%= edu.cgpa %></span>
+          <% } %>
+          <br>
+          <span class="company"><%= edu.institute %></span>
+          <% if (edu.duration) { %>
+            <span  class="period"><%= edu.duration %></span>
+          <% } %>
+          <% if (edu.extra) { %>
+            <br><p><%= edu.extra %></p>
+          <% } %>
+        </li>
+      <% }) %>
+    <% } else { %>
+      <p>No education listed.</p>
+    <% } %>
+  </ul>
+</div>
+    
+ 
+ <h2>Projects</h2>
+<div class="section">
+  <ul>
+    <% if (Projects && Projects.length > 0) { %>
+      <% Projects.forEach(project => { %>
+        
+        <li>
+          <strong class="title title2"><%= project.name %></strong>
+          
+          <% if (project.link) { %> - <a href="<%= project.link %>" target="_blank">Link</a><% } %><br>
+          <% if (project.tech) { %><span><b>Tech Stack:</b> <%= project.tech %></span><% } %>
+          <% if (project.desc) { %><p><%= project.desc %></p><% } %>
+          
+        </li>
+      <% }) %>
+    <% } else { %>
+      <p>No projects listed.</p>
+    <% } %>
+  </ul>
+</div>
+
+<h2>Key Achievements</h2>
+<div class="section section3">
+  <ul>
+    <% if (achievements && achievements.length > 0) { %>
+      <% achievements.forEach(achieve => { %>
+        <li>
+          <strong class="title title2"><%= achieve.name %></strong>
+          <% if (achieve.desc) { %><p><%= achieve.desc %></p><% } %>
+           <% if (achieve.area) { %><span> <%= achieve.area %></span><% } %>
+         
+        </li>
+      <% }) %>
+    <% } else { %>
+      <p>No Achievement listed.</p>
+    <% } %>
+  </ul>
+</div>
+
+
+
+    <h2>Skills</h2>
+    <div class="section skills-list">
+      <ul>
+        <% skills.forEach(function(skill) { %>
+          <li><%= skill %></li>
+        <% }) %>
+      </ul>
+    </div>
+  </div>
+
+
+
+<script src="/js/download.js"></script>
+</body>
+</html>
+     

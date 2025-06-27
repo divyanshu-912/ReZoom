@@ -2,27 +2,41 @@
 <html>
 <head>
   <title>Resume Generator</title>
-  
   <link rel="stylesheet" href="/css/form.css">
-  
 </head>
 <body>
-
-
+  <header>
+    <div class="logo">
+      <img src="/images/rezoomlogo.png" alt="ReZoom Logo" />
+      <h2>ReZoom</h2>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/resume/form">Create Your Resume</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/feedback">Give Feedback</a></li>
+      </ul>
+    </nav>
+  </header>
 
 <div class="form-container">
+
   <h1>Resume Generator</h1>
   <form action="/resume/generate" method="POST" id="resumeForm">
-    <label><input name="name" placeholder="Full Name" required></label>
-    
+    <div class="names">
 
+    <label><input name="name" placeholder="Full Name" required></label>
     <label><input type="text" name="app_post" placeholder="Post of Application"></label>
+    </div>
     <div class="contact-details">
       <span>Contact Details:</span><br>
       <label><input name="email" placeholder="Email Address" required></label>
       <label><input name="phone" placeholder="Phone Number"></label>
       <label><input name="linkedin"  placeholder="LinkedIN"></label>
       <label><input name="github" placeholder="Github"></label>
+      <label><input name="github" placeholder="Portfolio Link"></label>
+      <label><input name="github" placeholder="Your Address"></label>
     </div>
    
 
@@ -33,7 +47,7 @@
   <label><input type="text" name="company[]" placeholder="Company Name"></label>
   <label><input type="text" name="location[]" placeholder="Location"></label>
   <label><input type="text" name="period[]" placeholder="Duration of Work"></label>
-  <label><input type="text" name="details[]" placeholder="Detail"></label><br>
+  <label><input type="text" name="details[]" placeholder="Detail"></label>
 </div>
 <button type="button" onclick="addWork()" class="add-btn">Add Work Experience</button>
 
@@ -51,10 +65,10 @@
 
 
 
-    <div class="projects-section" id="projects-section">
+  <div class="projects-section" id="projects-section">
     <span>Projects:</span><br>
       <label><input type="text" class="project_heading" name="projects[]" placeholder="Project 1"></label>
-      <label><input type="text" name="desc[]" placeholder="Desc[]"></label>
+      <label><input type="text" name="desc[]" placeholder="Desc"></label>
       <label><input type="text" name="tech[]" placeholder="Tech Stack use"></label>
     </div>
     <button type="button" onclick="addProject()" class="add-btn">Add Project</button>
@@ -64,9 +78,8 @@
 <div class="achievement-section" id="achievement-section">
   <span>Achievements:</span><br>
   <label><input type="text" name="achievement[]" placeholder="Achievement 1"></label>
-  
-  <label><input type="text" name="area[]" placeholder="Area of Achievement"></label><br>
-  <label><input type="text" name="descA[]" placeholder="Description"></label><br>
+  <label><input type="text" name="area[]" placeholder="Area of Achievement"></label>
+  <label><input type="text" name="descA[]" placeholder="Description"></label>
 </div>
 <button type="button" onclick="addAchievement()" class="add-btn">Add Achievement</button>
 
