@@ -24,10 +24,11 @@
 
   <h1>Resume Generator</h1>
   <form action="/resume/generate" method="POST" id="resumeForm">
-    <label><input name="name" placeholder="Full Name" required></label>
-    
+    <div class="names">
 
+    <label><input name="name" placeholder="Full Name" required></label>
     <label><input type="text" name="app_post" placeholder="Post of Application"></label>
+    </div>
     <div class="contact-details">
       <span>Contact Details:</span><br>
       <label><input name="email" placeholder="Email Address" required></label>
