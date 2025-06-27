@@ -6,14 +6,14 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to bottom right, #e6f5f5, #f6f9fb);
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to bottom right,#152F42 0%,#F2F3F5 100%);
   min-height: 100vh;
   color: #1f2937;
 }
 
 header {
-  background-color: #F1FFF8;
+  background-color: #152F42;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,6 +31,7 @@ header {
   color: #0f2b3f;
   font-size: 20px;
   font-weight: 700;
+  filter: brightness(0) invert(1);
 }
 
 .logo img {
@@ -46,15 +47,15 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  color: #0a0a0a;
-  font-weight: 600;
+  color: #fff;
+  font-weight: 500;
   font-size: 17px;
-  transition: 0.2s ease-in-out;
+  transition: color 0.3;
 }
 
 nav ul li a:hover {
-  color: #198754;
-  border-bottom: 2px solid #198754;
+  color: #D4AF37;
+  border-bottom: 1px solid #D4AF37;
 }
 
 .container {
@@ -67,7 +68,7 @@ nav ul li a:hover {
 .container h1 {
   font-size: 2.3rem;
   font-weight: 700;
-  color: #1a202c;
+  color: #fff;
   margin-bottom: 30px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
@@ -81,10 +82,10 @@ nav ul li a:hover {
 }
 
 .theme-card {
-  background-color: #f8f8f8; 
-  border: 1px solid #CBD5E1;
+  background-color: #FAFBFC; 
+  border: 1px solid #D6DEE5;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 24px rgba(21, 47, 66, 0.08);
   width: 350px;
   padding: 20px;
   text-align: center;
@@ -92,15 +93,16 @@ nav ul li a:hover {
 }
 
 .theme-card:hover {
-  transform: scale(1.01);
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+box-shadow: 0 14px 32px rgba(21, 47, 66, 0.18);
+  border:3px solid #D4AF37;
 }
 
 .theme-card img {
   width: 100%;
   border-radius: 6px;
   margin-bottom: 15px;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .theme-name {
@@ -112,22 +114,24 @@ nav ul li a:hover {
 
 .select-btn {
   display: inline-block;
-  background-color: #198754;
-  color: #ffffff;
-  padding: 10px 22px;
-  border-radius: 6px;
+  background-color: #D4AF37;
+  color: #152F42;
+  padding: 12px 28px;
+  border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
   transition: all 0.2s ease-in-out;
+  cursor: pointer;
 }
 
 .select-btn:hover {
-  background-color: #157347;
-  transform: scale(1.05);
+  background-color: #c6a437;
+    transform: translateY(-2px);
+box-shadow: 0 8px 22px rgba(21, 47, 66, 0.18);
 }
 
 footer {
-  background-color: #0c2f2f;
+  background-color: #152F42;
   padding: 20px;
   text-align: center;
   color: white;
