@@ -97,17 +97,20 @@
 
 
 #downloadPDF{
-  position: relative;
-  top: 20px;
-  left: 30px;
-   background: #0d602c;
-  color: #fff;
-  border-radius: 2px;
-  text-decoration: none;
-  padding: 0.4em 1.0em;
-  display: inline-block;
-  border: none;
-  cursor: pointer;
-  font-size: .7em;
+    position: relative;
+    background: #D4AF37;
+    color: #152F42;
+     border-radius: 8px;
+     left: 40px;
+    text-decoration: none;
+    padding: 10px 26px;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 6px  14px rgba(21, 47, 66, 0.12);
+    transition: all 0.3s ease;
+    margin-top: 18px;
 }
   
