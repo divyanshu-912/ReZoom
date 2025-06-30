@@ -137,11 +137,17 @@ function addEducation() {
   input4.type = "text";
   input4.name = "cgpa[]";
   input4.placeholder = "CGPA";
+  
+  const input5 = document.createElement("input");
+  input5.type = "text";
+  input5.name = "branch[]";
+  input5.placeholder = "Branch and Specialization";
   section.appendChild(br);
   section.appendChild(label);
   section.appendChild(br2);
   section.appendChild(input1);
   section.appendChild(input2);
+  section.appendChild(input5);
   section.appendChild(input3);
   section.appendChild(input4);
   

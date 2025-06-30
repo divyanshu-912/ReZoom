@@ -61,7 +61,7 @@ nav ul li a:hover {
 align-items: center;
     justify-content: center;
     justify-items: center;
-    color: white;
+    color: #DDE3EA;
 }
 
 
@@ -78,13 +78,16 @@ margin: 25px;
     box-shadow: 0 12px 30px rgba(21, 47, 66, 0.12);
 }
 
-span{
+label,span{
   font-weight: 600;
   color: #152F42;
+  
+  font-size: 13px;
+}
+span{
   margin-top: 10px;
   margin-bottom: 5px;
   margin-left: 6px;
-  font-size: 13px;
 }
 
 form input{
@@ -156,4 +159,14 @@ form .names input{
 .add-btn:hover{
   background-color: #D4AF37;
   color: white;
+}
+
+
+footer {
+  background-color: #152F42;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  font-size: 0.95rem;
+  margin-top: 50px;
 }

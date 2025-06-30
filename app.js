@@ -10,21 +10,19 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-app.set("view engine", "ejs");
+app.use(session({
+  secret: 'resumeSecret',
+  resave: false,
+  saveUninitialized: true,
+}));
+
 
 
 const logo=[{id:"logo",name:"Logo",image:"/images/rezoomlogo.png"}]
 const themes = [
   { id: "classic", name: "Classic", image: "/images/denverRed.png" },
   { id: "modern", name: "Modern", image: "/images/denverBlue.png" },
-  { id: "classic", name: "Classic", image: "/images/denverRed.png" },
-  { id: "modern", name: "Modern", image: "/images/denverBlue.png" },
-  { id: "classic", name: "Classic", image: "/images/denverRed.png" },
-  { id: "modern", name: "Modern", image: "/images/denverBlue.png" },
-  { id: "classic", name: "Classic", image: "/images/denverRed.png" },
-  { id: "modern", name: "Modern", image: "/images/denverBlue.png" },
-  
-
+  { id: "elegant", name: "Elegant", image: "/images/elegant.png" },
 
   
  
