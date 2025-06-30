@@ -30,11 +30,14 @@ ul {
   margin-left: 20px;
 }
 
-footer {
+footer{
   background-color: #152F42;
   padding: 20px;
   text-align: center;
   color: white;
   font-size: 0.95rem;
   margin-top: 50px;
+}
+footer p{
+    color: white;
 }
