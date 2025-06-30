@@ -17,12 +17,12 @@
       <ul>
         <% if (ceducation && ceducation.length > 0) { %>
           <% ceducation.forEach(function(cedu) { %>
-            <li>
-              <span class="title"><%= cedu.degree %></span>
+            <li style="list-style: none;">
+              <span ><%= cedu.degree %></span>
               <br>
               <span class="branch"><%= cedu.branch %></span>
                <br>
-              <span class="company"><%= cedu.institute %></span>
+              <span  style="color:blueviolet ;"><%= cedu.institute %></span>
                            
             </li>
           <% }) %>

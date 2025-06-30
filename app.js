@@ -22,7 +22,7 @@ const logo=[{id:"logo",name:"Logo",image:"/images/rezoomlogo.png"}]
 const themes = [
   { id: "classic", name: "Classic", image: "/images/denverRed.png" },
   { id: "modern", name: "Modern", image: "/images/denverBlue.png" },
-  { id: "classic", name: "Elegant", image: "/images/denverRed.png" },
+  { id: "elegant", name: "Elegant", image: "/images/elegant.png" },
 
   
  

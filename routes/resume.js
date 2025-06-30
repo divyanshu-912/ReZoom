@@ -10,9 +10,9 @@ router.post('/generate', (req, res) => {
 
   const skillsArr = skills ? skills.split(',').map(s => s.trim()) : [];
   
-  const cdegreeArr = req.body['cdegree[]'] || req.body.degree || [];
-  const cinstituteArr = req.body['ceducation[]'] || req.body.education || [];
-  const cbranchArr = req.body['cbranch[]'] || req.body.branch || [];
+  const cdegreeArr = req.body['cdegree[]'] || req.body.cdegree || [];
+  const cinstituteArr = req.body['ceducation[]'] || req.body.ceducation || [];
+  const cbranchArr = req.body['cbranch[]'] || req.body.cbranch || [];
   
 
   let ceducationList = [];
