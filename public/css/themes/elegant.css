@@ -1,0 +1,126 @@
+ body { 
+        font-family: 'Segoe UI', sans-serif;
+        background: #f4f6fa;
+        color: #232323; 
+        margin:0; 
+    }
+.container {
+        max-width: 850px;
+        margin: 20px auto;
+        background: #fff;
+        border-radius: 12px; 
+        box-shadow: 0 4px 36px #c8d0e7; 
+        padding: 40px 56px;
+     }
+
+.personal-info {
+    position: relative;
+    top: -10px;
+}
+     
+.personal-info .name {
+    font-size: 40px;
+    font-weight: 500;
+}     
+.personal-info ul{
+    position: relative;
+    left: -38px;
+    top: -25px;
+} 
+
+.header{
+    display: flex;
+    margin-bottom: -50px;
+}
+
+
+.contact-links { 
+        text-align: right; 
+        margin-bottom: 2px; 
+        position: relative;
+        left: 385px;
+      
+}
+
+.contact-links a { 
+    color: #232323   ; 
+   
+    text-decoration: none; 
+    font-weight: 400;
+    font-size: .8em; 
+   
+}
+h2 { 
+        color: #232323; 
+        border-bottom: 2px solid #232323; 
+        padding-left: 2px; 
+        margin-top: 10px; 
+        font-size: .9em; 
+        letter-spacing: 1px;
+     }
+    .section { 
+        margin-bottom: 20px; 
+    }
+    .skills-list { 
+        columns: 2; 
+    }
+    .bold {
+        font-weight: 700; 
+    }
+    
+.title { font-weight: 600; color: #000000; font-size: .9em; }
+    
+.company,.title2 { font-weight: 600; color: #df2544; }
+   
+.period,.cgpa {
+        position: absolute;
+        right: 340px;
+        font-style: italic; color: #666; font-size: .7em; }
+.details{
+      font-size: 0.8em;
+      font-weight: 500;
+    }
+
+
+li{
+       list-style: square;
+}
+.section2 li,.section4 li{
+      margin-bottom: 20px;
+
+  }
+.section3 ul{
+    display: grid;
+  grid-template-columns:  repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px; /* space between grid items */
+ 
+  max-width: 900px; /* ya jitni chahiye */
+  margin: 0 auto;
+
+   }
+.section3 ul li {
+  width: 100%;
+  
+  padding: 1px;
+  box-sizing: border-box;
+}
+
+
+#downloadPDF{
+    position: relative;
+    background: #D4AF37;
+    color: #152F42;
+     border-radius: 8px;
+     left: 40px;
+    text-decoration: none;
+    padding: 10px 26px;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 6px  14px rgba(21, 47, 66, 0.12);
+    transition: all 0.3s ease;
+    margin-top: 18px;
+}
+  

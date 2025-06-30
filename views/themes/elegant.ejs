@@ -4,29 +4,84 @@
   <title>Resume - <%= name %></title>
   <link rel="stylesheet" href="/css/themes/elegant.css">
    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+   
 </head>
 <body>
   <button id="downloadPDF">Download PDF</button>
-  <div class="container">
-   <div class="name"><%= name %></div>
-    <div class="app_post"><%= app_post %></div>
-    <div class="links">
-      <% if (contact.email) { %><a href="<%= contact.email %>"><%= contact.email %></a><% } %>
-      <% if (contact.linkedin) { %><a href="<%= contact.linkedin %>">LinkedIn</a><% } %>
-      <% if (contact.github) { %><a href="<%= contact.github %>">Github</a><% } %>
-      <% if (contact.phone) { %><a href="<%= contact.phone %>"><%= contact.phone %></a><% } %>
-      
-    </div>
-    
+<div id="container" class="container">
 
-    <h2>Experience</h2>
+<div class="header">
+  <div class="personal-info">
+     <span class="name" ><%= name %></span>
+    
+      <ul>
+        <% if (ceducation && ceducation.length > 0) { %>
+          <% ceducation.forEach(function(cedu) { %>
+            <li>
+              <span class="title"><%= cedu.degree %></span>
+              <br>
+              <span class="branch"><%= cedu.branch %></span>
+               <br>
+              <span class="company"><%= cedu.institute %></span>
+                           
+            </li>
+          <% }) %>
+        <% } else { %>
+          <p>No education listed.</p>
+        <% } %>
+      </ul>
+ 
+  </div>
+
+
+  <div class="contact-links">
+     <% if (contact.phone) { %><a href="<%= contact.phone %>"><%= contact.phone %></a><% } %> <br>
+      <% if (contact.address) { %><a href="<%= contact.address %>"><%= contact.address %></a><% } %> <br>
+      <% if (contact.email) { %><a href="<%= contact.email %>"><%= contact.email %></a><% } %>  <br>
+      <% if (contact.linkedin) { %><a href="<%= contact.linkedin %>"><%= contact.linkedin %></a><% } %> <br>
+      <% if (contact.github) { %><a href="<%= contact.github %>"><%= contact.github %></a><% } %> <br>
+     
+      
+  </div>
+</div>    
+
+<h2>Education</h2>
+<div class="section section2">
+  <ul class="edu">
+    <% if (education && education.length > 0) { %>
+      <% education.forEach(function(edu) { %>
+        <li>
+          <span ><b><%= edu.institute %></b></span><br>
+          <span class="title"><%= edu.degree %></span>
+          <% if (edu.cgpa) { %>
+            <span style="padding-left: 40px;"><%= edu.cgpa %></span>
+          <% } %>
+          <br>
+          <span style="font-size: small;" ><%= edu.branch %></span>
+          
+          <% if (edu.duration) { %>
+            <span style="padding-left: 40px; font-size: small;"><%= edu.duration %></span>
+          <% } %>
+          <% if (edu.extra) { %>
+            <br><p><%= edu.extra %></p>
+          <% } %>
+        </li>
+      <% }) %>
+    <% } else { %>
+      <p>No education listed.</p>
+    <% } %>
+  </ul>
+</div>
+
+
+<h2>Work Experience</h2>
 <div class="section section4">
   <ul>
     <% if (workExperience && workExperience.length > 0) { %>
       <% workExperience.forEach(function(exp) { %>
         <li>
-          <span class="title"><%= exp.job %></span><br>
-          <span class="company"><%= exp.company %></span>
+          <span ><b><%= exp.job %></b></span><br>
+          <span style="font-size: small;"><%= exp.company %></span>
           <span class="period"><%= exp.location %> | <%= exp.period %> </span>
           <% if (exp.details) { %>
             <div class="details"><%= exp.details %></div>
@@ -39,41 +94,17 @@
   </ul>
 </div>
 
-<h2>Education</h2>
-<div class="section section2">
-  <ul>
-    <% if (education && education.length > 0) { %>
-      <% education.forEach(function(edu) { %>
-        <li>
-          <span class="title"><%= edu.degree %></span>
-          <% if (edu.cgpa) { %>
-            <span style="padding-left: 40px;"><%= edu.cgpa %></span>
-          <% } %>
-          <br>
-          <span class="company"><%= edu.institute %></span>
-          <% if (edu.duration) { %>
-            <span style="padding-left: 40px;"><%= edu.duration %></span>
-          <% } %>
-          <% if (edu.extra) { %>
-            <br><p><%= edu.extra %></p>
-          <% } %>
-        </li>
-      <% }) %>
-    <% } else { %>
-      <p>No education listed.</p>
-    <% } %>
-  </ul>
-</div>
+
     
  
- <h2>Projects</h2>
+ <h2>Personal Projects</h2>
 <div class="section">
   <ul>
     <% if (Projects && Projects.length > 0) { %>
       <% Projects.forEach(project => { %>
         
         <li>
-          <strong class="title"><%= project.name %></strong>
+          <b ><%= project.name %></b>
           
           <% if (project.link) { %> - <a href="<%= project.link %>" target="_blank">Link</a><% } %><br>
           <% if (project.tech) { %><p><b>Tech Stack:</b> <%= project.tech %></p><% } %>
@@ -107,7 +138,7 @@
 
 
 
-    <h2>Skills</h2>
+<h2>Skills</h2>
     <div class="section skills-list">
       <ul>
         <% skills.forEach(function(skill) { %>
@@ -115,9 +146,14 @@
         <% }) %>
       </ul>
     </div>
-  </div>
+</div>
 
 
+<!-- html2canvas CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<!-- jsPDF CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
 <script src="/js/download.js"></script>
 </body>

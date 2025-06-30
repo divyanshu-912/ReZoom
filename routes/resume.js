@@ -5,11 +5,32 @@ router.post('/generate', (req, res) => {
   const {
     name, app_post, email, phone, linkedin, github, summary, interests, skills,
      duration, cgpa, extra,projects:projectsRaw,
-    workExperience, Projects, theme, title, job, company, period, location, details,desc,tech,degree,education 
+    workExperience, Projects, theme, title, job, company, period, location, details,desc,tech,degree,education ,portfolio,address
     } = req.body;
 
   const skillsArr = skills ? skills.split(',').map(s => s.trim()) : [];
   
+  const cdegreeArr = req.body['cdegree[]'] || req.body.degree || [];
+  const cinstituteArr = req.body['ceducation[]'] || req.body.education || [];
+  const cbranchArr = req.body['cbranch[]'] || req.body.branch || [];
+  
+
+  let ceducationList = [];
+  if (Array.isArray(cdegreeArr)) {
+    ceducationList = cdegreeArr.map((deg, idx) => ({
+      degree: cdegreeArr,
+      institute: cinstituteArr[idx] || "",
+      branch: cbranchArr[idx] || ""
+     
+    }));
+  } else if (typeof cdegreeArr === 'string' && cdegreeArr.trim() !== "") {
+    ceducationList = [{
+      degree: cdegreeArr,
+      institute: cinstituteArr || "",
+      branch: cbranchArr || ""
+    }];
+  }
+
 
 const jobArr = req.body['job[]'] || req.body.job || [];
   const companyArr = req.body['company[]'] || req.body.company || [];
@@ -70,6 +91,7 @@ if (Array.isArray(achievementRaw)) {
  const degreeArr = req.body['degree[]'] || req.body.degree || [];
   const instituteArr = req.body['education[]'] || req.body.education || [];
   const durationArr = req.body['duration[]'] || req.body.duration || [];
+  const branchArr = req.body['duration[]'] || req.body.branch || [];
   const cgpaArr = req.body['cgpa[]'] || req.body.cgpa || [];
 
   let educationList = [];
@@ -78,6 +100,7 @@ if (Array.isArray(achievementRaw)) {
       degree: deg,
       institute: instituteArr[idx] || "",
       duration: durationArr[idx] || "",
+      branch: branchArr[idx] || "",
       cgpa: cgpaArr[idx] || ""
     }));
   } else if (typeof degreeArr === 'string' && degreeArr.trim() !== "") {
@@ -85,6 +108,7 @@ if (Array.isArray(achievementRaw)) {
       degree: degreeArr,
       institute: instituteArr || "",
       duration: durationArr || "",
+      branch: branchArr[idx] || "",
       cgpa: cgpaArr || ""
     }];
   }
@@ -95,7 +119,7 @@ if (Array.isArray(achievementRaw)) {
     name, app_post, summary, interests,
     skills: skillsArr,
     
-    contact: { email, phone, linkedin, github },
+    contact: { email, phone, linkedin, github,portfolio,address },
     workExperience: workExperienceList,
     
     Projects: projects.map((proj,index) => ({
@@ -107,6 +131,7 @@ if (Array.isArray(achievementRaw)) {
 
     achievements: achievements,
     education: educationList,
+    ceducation: ceducationList,
 
   };
 

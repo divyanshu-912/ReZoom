@@ -24,27 +24,27 @@
 
   <h1>Resume Generator</h1>
   <form action="/resume/generate" method="POST" id="resumeForm">
-    <div class="names">
+<div class="names">
 
     <label><input name="name" placeholder="Full Name" required></label>
     
-    <label><input type="text" name="app_post" placeholder="Post of Application"></label>
+  <label><input type="text" name="app_post" placeholder="Post of Application"></label>
   <div class="ceducation" id="ceducation-section">
-  <span>Current Education:</span><br>
-  <label><input name="cdegree[]" placeholder="Degree"></label>
-  <label><input name="ceducation[]" placeholder="Institute Name"></label>
-  <label><input type="text" name="cduration[]" placeholder="Duration"></label>
-  
-</div>
-    </div>
-    <div class="contact-details">
+      <span>Current Education:</span><br>
+      <label><input name="cdegree[]" placeholder="Degree"></label>
+      <label><input name="ceducation[]" placeholder="Institute Name"></label>
+      <label><input name="cbranch[]" placeholder="Branch/Specialization"></label>
+
+  </div>
+  </div>
+  <div class="contact-details">
       <span>Contact Details:</span><br>
       <label><input name="email" placeholder="Email Address" required></label>
       <label><input name="phone" placeholder="Phone Number"></label>
       <label><input name="linkedin"  placeholder="LinkedIN"></label>
       <label><input name="github" placeholder="Github"></label>
-      <label><input name="github" placeholder="Portfolio Link"></label>
-      <label><input name="github" placeholder="Your Address"></label>
+      <label><input name="portfolio" placeholder="Portfolio Link"></label>
+      <label><input name="address" placeholder="Your Address"></label>
     </div>
    
 
@@ -66,7 +66,9 @@
   <span>Education:</span><br>
   <label><input name="degree[]" placeholder="Degree"></label>
   <label><input name="education[]" placeholder="Institute Name"></label>
+  <label><input type="text" name="branch[]" placeholder="Branch or Specialization"></label>
   <label><input type="text" name="duration[]" placeholder="Duration"></label>
+  
   <label><input type="text" name="cgpa[]" placeholder="CGPA"></label>
 </div>
 <button type="button" onclick="addEducation()" class="add-btn">Add Education</button>
