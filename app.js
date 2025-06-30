@@ -30,6 +30,9 @@ const themes = [
 
 app.get('/', (req, res) => res.render('home', { themes }));
 
+app.get('/about', (req, res) => res.render('about'));
+
+
 app.get('/resume/form', (req, res) => {
   const selectedTheme = req.query.theme || 'modern';
   res.render('form', { theme: selectedTheme, themes });
